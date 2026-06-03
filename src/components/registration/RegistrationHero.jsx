@@ -11,7 +11,10 @@ function RegistrationHero() {
           <a href="#profile-form">Creator Form</a>
           <a href="#step-5">Collaborations</a>
         </nav>
-        <a className="header-cta" href="#profile-form">Apply Now</a>
+        <div className="flex items-center gap-3">
+          <a href="/admin" className="text-[#6b6259] hover:text-[#ff5a2f] text-sm font-semibold transition-colors">Admin</a>
+          <a className="header-cta" href="#profile-form">Apply Now</a>
+        </div>
       </header>
 
       <section className="hero-section" id="top">

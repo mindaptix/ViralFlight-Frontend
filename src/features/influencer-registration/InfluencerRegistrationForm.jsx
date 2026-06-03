@@ -151,8 +151,23 @@ function InfluencerRegistrationForm() {
       return { ...current, [field]: next };
     });
 
-  const handleSubmit = (event) => {
+  const [submitError, setSubmitError] = useState("");
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    setSubmitError("");
+    try {
+      const res = await fetch(`${import.meta.env.VITE_API_URL ?? "http://localhost:5000"}/api/influencers`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (!res.ok) { setSubmitError(data.message ?? "Submission failed. Try again."); return; }
+    } catch {
+      setSubmitError("Server unreachable. Please try again.");
+      return;
+    }
     setSubmitted(true);
   };
 
@@ -237,6 +252,7 @@ function InfluencerRegistrationForm() {
               </p>
               <button type="submit">Submit Registration</button>
               <small>Your data is secure and never sold to third parties.</small>
+              {submitError && <strong className="block mt-3 text-[#f87171] text-sm">{submitError}</strong>}
             </section>
           </form>
         </>
