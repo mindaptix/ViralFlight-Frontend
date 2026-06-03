@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { apiRequest } from "../../services/apiClient";
 
 function EyeIcon({ open }) {
   return open ? (
@@ -26,16 +27,14 @@ function AdminLogin() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL ?? "http://localhost:5000"}/api/admin/auth`, {
+      await apiRequest("/api/admin/auth", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ password }),
       });
-      if (!res.ok) { setError("Wrong password. Try again."); return; }
       sessionStorage.setItem("vf_admin_token", password);
       navigate("/admin/dashboard");
-    } catch {
-      setError("Cannot reach server. Make sure backend is running.");
+    } catch (err) {
+      setError(err.message || "Wrong password. Try again.");
     } finally {
       setLoading(false);
     }

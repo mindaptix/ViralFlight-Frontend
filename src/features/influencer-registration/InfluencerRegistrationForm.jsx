@@ -11,6 +11,7 @@ import BasicInfoSection from "./sections/BasicInfoSection";
 import CategorySection from "./sections/CategorySection";
 import CollaborationSection from "./sections/CollaborationSection";
 import PlatformsSection from "./sections/PlatformsSection";
+import { apiRequest } from "../../services/apiClient";
 
 const NEXT_STEPS = [
   { n: "01", title: "Profile Review", desc: "Our team reviews your profile within 24–48 hours." },
@@ -157,15 +158,12 @@ function InfluencerRegistrationForm() {
     event.preventDefault();
     setSubmitError("");
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL ?? "http://localhost:5000"}/api/influencers`, {
+      await apiRequest("/api/influencers", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
-      const data = await res.json();
-      if (!res.ok) { setSubmitError(data.message ?? "Submission failed. Try again."); return; }
-    } catch {
-      setSubmitError("Server unreachable. Please try again.");
+    } catch (err) {
+      setSubmitError(err.message || "Submission failed. Try again.");
       return;
     }
     setSubmitted(true);
