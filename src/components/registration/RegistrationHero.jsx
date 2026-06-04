@@ -27,7 +27,7 @@ function RegistrationHero() {
               <span>premium brand</span> campaigns.
             </h1>
             <p className="hero-copy">
-              One polished profile — brands discover you, agencies shortlist you.
+              One polished profile - brands discover you, agencies shortlist you.
             </p>
             <div className="hero-actions">
               <a className="primary-action" href="#profile-form">
@@ -69,7 +69,7 @@ function RegistrationHero() {
             <div className="insight-grid">
               <span><strong>92K</strong>Instagram</span>
               <span><strong>7.8%</strong>Engagement</span>
-              <span><strong>18–34</strong>Audience</span>
+              <span><strong>18-34</strong>Audience</span>
               <span><strong>Rs. 25K+</strong>Campaigns</span>
             </div>
             <div className="creator-card featured">

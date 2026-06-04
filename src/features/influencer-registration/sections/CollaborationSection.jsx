@@ -86,7 +86,7 @@ function CollaborationSection({ form, updateField, toggleListValue }) {
       <SelectInput
         label="How did you hear about VF App?"
         value={form.source}
-        options={["Instagram", "Friend / Referral", "Brand", "Google Search", "Event", "Other"]}
+        options={["Instagram", "Friend/Referral", "Brand", "Google Search", "Event", "Other"]}
         onChange={(value) => updateField("source", value)}
       />
       <TextInput

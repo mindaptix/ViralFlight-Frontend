@@ -49,7 +49,7 @@ function AdminLogin() {
           </div>
         </div>
         <h1 className="text-white text-2xl font-bold text-center mb-1">Admin Panel</h1>
-        <p className="text-[#6b6259] text-sm text-center mb-8">ViralFlight — Talent Desk</p>
+        <p className="text-[#6b6259] text-sm text-center mb-8">ViralFlight - Talent Desk</p>
 
         <form onSubmit={handleSubmit} className="bg-[#111009] border border-[rgba(255,255,255,0.08)] rounded-2xl p-6">
           <label className="block text-[#9d9282] text-xs font-semibold uppercase tracking-widest mb-2">

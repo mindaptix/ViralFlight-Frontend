@@ -388,10 +388,6 @@ button {
   font-weight: 800;
 }
 
-.creator-avatar.teal {
-  background: linear-gradient(135deg, var(--teal), #4db6ac);
-}
-
 .creator-card strong {
   display: block;
   color: #fffaf1;

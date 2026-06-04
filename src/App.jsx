@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import InfluencerRegistrationForm from "./features/influencer-registration/InfluencerRegistrationForm";
 import AdminLogin from "./features/admin/AdminLogin";
 import AdminDashboard from "./features/admin/AdminDashboard";
-import "./index.css";
 
 function App() {
   return (

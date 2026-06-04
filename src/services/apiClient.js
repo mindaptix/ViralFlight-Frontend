@@ -1,10 +1,6 @@
 const configuredBaseUrl = import.meta.env.VITE_API_URL?.replace(/\/$/, "");
 const API_BASE_URL = configuredBaseUrl || (import.meta.env.DEV ? "http://localhost:5000" : "");
 
-export function getApiBaseUrl() {
-  return API_BASE_URL;
-}
-
 async function parseResponse(response) {
   const contentType = response.headers.get("content-type") || "";
   if (contentType.includes("application/json")) {

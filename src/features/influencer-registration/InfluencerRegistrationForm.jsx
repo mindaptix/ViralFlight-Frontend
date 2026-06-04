@@ -14,7 +14,7 @@ import PlatformsSection from "./sections/PlatformsSection";
 import { apiRequest } from "../../services/apiClient";
 
 const NEXT_STEPS = [
-  { n: "01", title: "Profile Review", desc: "Our team reviews your profile within 24–48 hours." },
+  { n: "01", title: "Profile Review", desc: "Our team reviews your profile within 24-48 hours." },
   { n: "02", title: "WhatsApp Confirmation", desc: "You'll receive a message once you're shortlisted." },
   { n: "03", title: "Brand Matching", desc: "We match you with campaigns that fit your niche." },
 ];
@@ -24,7 +24,6 @@ function SuccessScreen({ name, phone, email }) {
     <div className="py-16 px-4 pb-28">
       <div className="max-w-145 mx-auto">
 
-        {/* Badge */}
         <div className="flex justify-center mb-7">
           <div className="relative">
             <div className="w-24 h-24 rounded-full bg-[#fff3ee] border-[3px] border-[#ff5a2f] flex items-center justify-center shadow-[0_0_0_8px_rgba(255,90,47,0.08)]">
@@ -35,22 +34,18 @@ function SuccessScreen({ name, phone, email }) {
           </div>
         </div>
 
-        {/* Eyebrow */}
         <p className="text-center text-[11px] font-bold tracking-[0.22em] text-[#ff5a2f] uppercase mb-3">
           Application Received
         </p>
 
-        {/* Heading */}
         <h1 className="text-center text-[40px] font-extrabold text-[#17130f] leading-tight tracking-tight mb-4">
           You&apos;re in,<br />{name}!
         </h1>
 
-        {/* Sub */}
         <p className="text-center text-[#706b62] text-[15px] leading-relaxed max-w-100 mx-auto mb-10">
           Your creator profile is with our team. Expect a WhatsApp confirmation within 48 hours.
         </p>
 
-        {/* Registered card */}
         <div className="bg-white rounded-2xl border border-[#ede5d8] p-6 mb-4 shadow-[0_4px_24px_rgba(23,19,15,0.07)]">
           <p className="text-[10px] font-bold tracking-[0.18em] text-[#b0a494] uppercase mb-5">
             Registered With
@@ -84,7 +79,6 @@ function SuccessScreen({ name, phone, email }) {
           </div>
         </div>
 
-        {/* Steps card */}
         <div className="bg-[#17130f] rounded-2xl p-6 mb-8">
           <p className="text-[10px] font-bold tracking-[0.18em] text-[#ff5a2f] uppercase mb-6">
             What Happens Next
@@ -104,7 +98,6 @@ function SuccessScreen({ name, phone, email }) {
           </div>
         </div>
 
-        {/* Footer */}
         <p className="text-center text-[13px] text-[#b0a494]">
           Thank you for joining ViralFlight. Let&apos;s build something great.
         </p>
